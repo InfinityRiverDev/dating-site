@@ -1,0 +1,74 @@
+.container {
+  padding: 140px 0px 40px;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.card {
+  display: flex;
+  column-gap: 30px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 32px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.cardPhoto {
+  background: #fff;
+  padding: 40px;
+  border-radius: 32px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.08);
+  transform: rotate(2deg);
+}
+
+.cardInfo {
+  font-size: 1.5rem;
+  background: #fff;
+  padding: 40px;
+  border-radius: 32px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: center;
+  align-self: center;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.cardInfo .actions .dislike {
+  margin-right: 5px;
+}
+.cardInfo .actions .like {
+  margin-left: 5px;
+}
+
+.cardInfo .actions button{
+  transition: all .5s ease;
+}
+
+.cardInfo .actions button:hover {
+  transform: scale(1.1);
+}
+
+img {
+  width: 300px;
+  pointer-events: none;
+}
+
+.Paperclip {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.Flame {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.noAn {
+  font-size: 5rem;
+}

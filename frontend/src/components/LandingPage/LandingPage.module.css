@@ -1,0 +1,64 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.main {
+  text-align: center;
+  max-width: 900px;
+}
+
+.hero {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+.bottom {
+  font-size: 1.8rem;
+}
+
+
+
+
+.wave {
+  width: 100%;
+  top: 45%;
+  position: absolute;
+  z-index: 1;
+}
+
+.svg {
+  width: 100%;
+  height: 250px;
+  display: block;
+}
+
+.svg path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: drawErase 8s ease-in-out infinite;
+}
+
+@keyframes drawErase {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -2000;
+  }
+}

@@ -1,0 +1,48 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 360px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+button {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  border: none;
+}
+
+.footer {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #666;
+}
