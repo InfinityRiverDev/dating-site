@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const AboutUs = () => {
   return (
     <div className={styles.page}>
-      {/* Основной текстовый блок */}
       <div className={styles.container}>
         <h2 className={styles.title}>
           Устал от бесконечного скролла в общих чатах, где невозможно никого нормально узнать? Мы тоже.

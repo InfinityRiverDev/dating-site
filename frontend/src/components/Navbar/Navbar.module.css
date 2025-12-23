@@ -8,6 +8,8 @@
   pointer-events: none;
   font-size: 1.3rem;
   user-select: none;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -15,15 +17,14 @@
   width: 90%;
   max-width: 1200px;
   padding: 14px 40px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(16px);
   border-radius: 999px;
   border: 1px solid rgba(0,0,0,0.08);
+  box-sizing: border-box;
 }
 
 .leftNav,
@@ -36,7 +37,7 @@
 a {
   text-decoration: none;
   color: #111;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
 }
 
 a:not(.main):hover {
@@ -64,4 +65,58 @@ a:not(.main):hover {
 .signup:hover {
   background: none;
   color: #111;
+}
+
+/* --- Адаптив для планшетов --- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .leftNav,
+  .rightNav {
+    gap: 16px;
+  }
+
+  .logo a {
+    font-size: 1.3rem;
+  }
+
+  a {
+    font-size: 0.95rem;
+  }
+
+  .signup {
+    padding: 5px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Адаптив для телефонов --- */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .leftNav,
+  .rightNav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logo a {
+    font-size: 1.1rem;
+  }
+
+  a {
+    font-size: 0.85rem;
+  }
+
+  .signup {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+  }
 }

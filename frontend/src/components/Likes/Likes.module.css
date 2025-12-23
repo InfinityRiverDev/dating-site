@@ -5,10 +5,13 @@
   justify-content: center;
   gap: 24px;
   user-select: none;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .slider {
   width: 420px;
+  max-width: 100%; /* чтобы не вылезало на маленьких экранах */
   overflow: hidden;
 }
 
@@ -25,6 +28,7 @@
   backdrop-filter: blur(16px);
   text-align: center;
   border: 1px solid rgba(0,0,0,0.08);
+  box-sizing: border-box;
 }
 
 .card img {
@@ -37,23 +41,24 @@
 
 .card h2 {
   margin: 8px 0;
+  font-size: 1.5rem;
 }
 
 .institute {
   font-weight: 500;
   opacity: 0.8;
+  font-size: 1rem;
 }
 
 .telegram {
   margin-top: 12px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
 .arrow {
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  margin-left: 0;
 }
 
 .arrow:hover {
@@ -63,4 +68,60 @@
 
 .noAn {
   font-size: 5rem;
+}
+
+/* --- Адаптив для планшетов --- */
+@media (max-width: 768px) {
+  .slider {
+    width: 320px;
+  }
+
+  .card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .institute {
+    font-size: 0.95rem;
+  }
+
+  .telegram {
+    font-size: 1rem;
+  }
+
+  .noAn {
+    font-size: 4rem;
+  }
+}
+
+/* --- Адаптив для телефонов --- */
+@media (max-width: 480px) {
+  .slider {
+    width: 260px;
+  }
+
+  .card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+
+  .institute {
+    font-size: 0.85rem;
+  }
+
+  .telegram {
+    font-size: 0.9rem;
+  }
+
+  .noAn {
+    font-size: 3rem;
+  }
 }

@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  background: #f5f7fa; /* светлый фон страницы */
+  background: #f5f7fa;
   user-select: none;
 }
 
@@ -18,8 +18,8 @@
   padding: 40px 30px;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column; /* текст и список вертикально */
-  gap: 20px; /* расстояние между блоками */
+  flex-direction: column;
+  gap: 20px;
 }
 
 .title {
@@ -48,9 +48,8 @@
   line-height: 1.6;
 }
 
-/* Добавим мягкий hover эффект для списка */
 .listItem:hover {
-  color: #2563eb; /* синий при наведении */
+  color: #2563eb;
   transition: color 0.3s;
 }
 
@@ -91,4 +90,68 @@
   font-size: 1rem;
   color: #4b5563;
   line-height: 1.6;
+}
+
+/* --- Адаптив для мобильных устройств --- */
+@media (max-width: 768px) {
+  .page {
+    padding: 80px 15px 40px;
+  }
+
+  .container {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+
+  .listItem {
+    font-size: 1.2rem;
+  }
+
+  .partnerCard {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+
+  .partnerTitle {
+    font-size: 1.5rem;
+  }
+
+  .partnerText {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 60px 10px 30px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .text,
+  .partnerText {
+    font-size: 0.9rem;
+  }
+
+  .listItem {
+    font-size: 1rem;
+  }
+
+  .partnerCard {
+    padding: 15px 10px;
+  }
+
+  .partnerLogo {
+    max-width: 120px;
+  }
 }

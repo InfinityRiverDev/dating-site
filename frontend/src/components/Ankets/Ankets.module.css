@@ -1,5 +1,5 @@
 .container {
-  padding: 140px 0px 40px;
+  padding: 140px 20px 40px;
   display: flex;
   justify-content: center;
   user-select: none;
@@ -14,6 +14,7 @@
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
   text-align: center;
   border: 1px solid rgba(0,0,0,0.08);
+  flex-wrap: wrap; /* чтобы элементы переносились на маленьких экранах */
 }
 
 .cardPhoto {
@@ -24,6 +25,7 @@
   text-align: center;
   border: 1px solid rgba(0,0,0,0.08);
   transform: rotate(2deg);
+  flex: 1 1 300px; /* адаптивная ширина */
 }
 
 .cardInfo {
@@ -35,6 +37,7 @@
   text-align: center;
   align-self: center;
   border: 1px solid rgba(0,0,0,0.08);
+  flex: 1 1 300px; /* адаптивная ширина */
 }
 
 .cardInfo .actions .dislike {
@@ -53,10 +56,12 @@
 }
 
 img {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   pointer-events: none;
 }
 
+/* Абсолютные элементы */
 .Paperclip {
   position: absolute;
   top: 20px;
@@ -71,4 +76,56 @@ img {
 
 .noAn {
   font-size: 5rem;
+}
+
+/* --- Адаптив для планшетов --- */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    padding: 30px;
+    column-gap: 0;
+    row-gap: 20px;
+  }
+
+  .cardPhoto,
+  .cardInfo {
+    padding: 25px;
+    flex: 1 1 100%;
+  }
+
+  .cardInfo {
+    font-size: 1.2rem;
+  }
+
+  img {
+    max-width: 250px;
+  }
+
+  .noAn {
+    font-size: 4rem;
+  }
+}
+
+/* --- Адаптив для телефонов --- */
+@media (max-width: 480px) {
+  .container {
+    padding: 60px 10px 30px;
+  }
+
+  .cardPhoto,
+  .cardInfo {
+    padding: 20px;
+  }
+
+  .cardInfo {
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 200px;
+  }
+
+  .noAn {
+    font-size: 3rem;
+  }
 }

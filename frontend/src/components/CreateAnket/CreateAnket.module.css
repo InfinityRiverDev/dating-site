@@ -1,5 +1,5 @@
 .page {
-  padding: 140px 0px 40px;
+  padding: 140px 20px 40px;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -15,19 +15,9 @@
   border-radius: 32px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.06);
   border: 1px solid rgba(0,0,0,0.08);
+  flex-wrap: wrap; /* перенос элементов на маленьких экранах */
 }
 
-.cardInfo {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 900px;
-  background: #fff;
-  padding: 40px;
-  border-radius: 32px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
-  border: 1px solid rgba(0,0,0,0.08);
-}
 .cardPhoto {
   display: flex;
   flex-direction: column;
@@ -40,6 +30,20 @@
   border: 1px solid rgba(0,0,0,0.08);
   align-self: center;
   margin-right: 10px;
+  flex: 1 1 300px; /* адаптивная ширина */
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 32px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.08);
+  flex: 1 1 300px; /* адаптивная ширина */
 }
 
 h1 {
@@ -58,7 +62,6 @@ h1 {
   margin-bottom: 24px;
   align-items: center;
   column-gap: 10px;
-
 }
 
 select {
@@ -125,19 +128,6 @@ button:hover {
   color: #000;
 }
 
-
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .userPhoto {
   border-radius: 12px;
   width: 100%;
@@ -145,4 +135,51 @@ button:hover {
   object-fit: cover; 
   object-position: center; 
   z-index: 1;
+}
+
+/* --- Адаптив для планшетов --- */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    flex-direction: column; /* карточки становятся вертикальными */
+    row-gap: 20px;
+  }
+
+  .cardPhoto,
+  .cardInfo {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px;
+  }
+}
+
+/* --- Адаптив для телефонов --- */
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardPhoto,
+  .cardInfo {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 0.9rem;
+    padding: 12px 14px;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
 }
