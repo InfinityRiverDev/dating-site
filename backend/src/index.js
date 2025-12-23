@@ -10,11 +10,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: "*", // или твой фронтенд https://your-frontend.com
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors);
 app.use(express.json({ limit: "5mb" })); // для base64 фото
 
 app.use("/auth", authRoutes);
