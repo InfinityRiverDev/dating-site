@@ -13,6 +13,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Music from "./components/Music/Music";
 
 import { getMe } from "./redux/actions/authActions";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/about" element={<AboutUs />} />
 
         <Route
           path="/ankets"
