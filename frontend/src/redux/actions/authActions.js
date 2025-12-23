@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = `${process.env.REACT_APP_API_URL}/auth`;
+const API = "http://localhost:5000/auth";
 
 export const register = (data) => async (dispatch) => {
   try {
