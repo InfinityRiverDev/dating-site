@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/users";
+const API = `${process.env.REACT_APP_API_URL}/users`;
 
 export const fetchFeed = () => async (dispatch, getState) => {
   dispatch({ type: "USERS_LOADING" });
